@@ -1,6 +1,7 @@
  export const menus= function () {
     const content=document.getElementById('content');
     const container= document.createElement('div');
+    container.classList.add("menu");
     content.appendChild(container);
     const veget= document.createElement('div');
     veget.classList.add("vegt");
