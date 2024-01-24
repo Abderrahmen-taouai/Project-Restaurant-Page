@@ -1,6 +1,9 @@
-import { menus } from "./menu";
+import { menus } from  '/home/abdu/Project-Restaurant-Page/src/menu';
+import {pageload}from './home.js';
+import { contacts } from  '/home/abdu/Project-Restaurant-Page/src/contact';
 
-const createTabs= ()=>{
+
+export const createTabs= ()=>{
 
     const contents= document.getElementById('content');
     
@@ -32,10 +35,22 @@ const createTabs= ()=>{
             contents.removeChild(contents.firstChild.nextSibling);
         }}
  
-        const menu= document.getElementById('e1').addEventListener('click',()=>{
+        const menu= document.getElementById('e2').addEventListener('click',()=>{
             clearDom();
+          
             menus();
 
  })
+ const home= document.getElementById('e1').addEventListener('click',()=>{
+    clearDom();
+    
+    pageload();
+
+})
+const contact= document.getElementById('e3').addEventListener('click',()=>{
+    clearDom();
+    contacts();
+
+})
+
 };
-export default createTabs;
