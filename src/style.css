@@ -134,12 +134,16 @@ li {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(79, 83, 121, 0.9);
     border-radius: 1.5rem;
     border: 0.2rem black solid;
     padding: 2rem 0.5rem;
     width: 75%;
 
+
+}
+.contact > *{
+    background-color: transparent; 
 }
 
 .text {
