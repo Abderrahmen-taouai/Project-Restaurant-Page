@@ -1,4 +1,4 @@
-import style from "./style.css";
+import styles from "./style.css"
 
 import intiaload from "./homepage.js";
 
