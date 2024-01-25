@@ -1,4 +1,5 @@
 import { createTabs } from "/home/abdu/Project-Restaurant-Page/src/tabs";
+import Home from  './assets/main.jpg';
 
 export const pageload = function () {
   const contents = document.getElementById("content");
@@ -17,7 +18,7 @@ export const pageload = function () {
 
   //Home image
   const homeimg = document.createElement("img");
-  homeimg.src = "../src/assets/main.jpg";
+  homeimg.src = Home;
   homeimg.alt = "Home image halal restaurant";
   homeimg.classList.add("homeimg");
 

@@ -1,3 +1,6 @@
+import fries from  './assets/friesbowl.png';
+import Zoodles from  './assets/ZoodlesBowl.png';
+import naanarito from  './assets/naanarito.png';
 export const menus = function () {
   const content = document.getElementById("content");
   const container = document.createElement("div");
@@ -12,7 +15,7 @@ export const menus = function () {
   const h11 = document.createElement("h2");
   h11.textContent = "Fries Bowl";
   const img11 = document.createElement("img");
-  img11.src = "/home/abdu/Project-Restaurant-Page/src/assets/friesbowl.png";
+  img11.src = fries;
   const p11 = document.createElement("p");
   p11.textContent = "590 - 1140 CAL";
   div11.appendChild(h11);
@@ -31,7 +34,7 @@ export const menus = function () {
   const h22 = document.createElement("h2");
   h22.textContent = "Zoodles Bowl";
   const img22 = document.createElement("img");
-  img22.src = "/home/abdu/Project-Restaurant-Page/src/assets/ZoodlesBowl.png";
+  img22.src = Zoodles;
   const p22 = document.createElement("p");
   p22.textContent = "590 - 1140 CAL";
   div22.appendChild(h22);
@@ -50,7 +53,7 @@ export const menus = function () {
   const h33 = document.createElement("h2");
   h33.textContent = "Naanarito";
   const img33 = document.createElement("img");
-  img33.src = "/home/abdu/Project-Restaurant-Page/src/assets/naanarito.png";
+  img33.src = naanarito;
   const p33 = document.createElement("p");
   p33.textContent = "590 - 1140 CAL";
   div33.appendChild(h33);
