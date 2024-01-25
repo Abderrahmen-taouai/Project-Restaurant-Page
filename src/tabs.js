@@ -1,56 +1,50 @@
-import { menus } from  '/home/abdu/Project-Restaurant-Page/src/menu';
-import {pageload}from './home.js';
-import { contacts } from  '/home/abdu/Project-Restaurant-Page/src/contact';
+import { menus } from "/home/abdu/Project-Restaurant-Page/src/menu";
+import { pageload } from "./home.js";
+import { contacts } from "/home/abdu/Project-Restaurant-Page/src/contact";
 
+export const createTabs = () => {
+  const contents = document.getElementById("content");
 
-export const createTabs= ()=>{
+  const header = document.createElement("header");
+  contents.appendChild(header);
 
-    const contents= document.getElementById('content');
-    
-    const header=document.createElement('header');
-    contents.appendChild(header);
-    
-    const arr = ['Home', 'Menu', 'Contact'];
+  const arr = ["Home", "Menu", "Contact"];
 
+  // create ul element and set the attributes.
+  const ul = document.createElement("ul");
 
-    // create ul element and set the attributes.
-    const ul = document.createElement('ul');
-    
-    
-    for (let i = 0; i <= arr.length - 1; i++) {
-        var li = document.createElement('li');     // create li element.
-        li.textContent = arr[i]; 
-        li.setAttribute('id', `e${i+1}`);     // assigning Id from i+1  and text to li using array value.
-        li.setAttribute('style', 'display: block;');    // remove the bullets.
-    
-        ul.appendChild(li);     // append li to ul.
+  for (let i = 0; i <= arr.length - 1; i++) {
+    var li = document.createElement("li"); // create li element.
+    li.textContent = arr[i];
+    li.setAttribute("id", `e${i + 1}`); // assigning Id from i+1  and text to li using array value.
+    li.setAttribute("style", "display: block;"); // remove the bullets.
+
+    ul.appendChild(li); // append li to ul.
+  }
+
+  header.appendChild(ul); // add list to the container.
+
+  /////Clear all the elements starting from 2dn using nextsibling of the dom except header
+  function clearDom() {
+    while (contents.firstChild.nextSibling) {
+      contents.removeChild(contents.firstChild.nextSibling);
     }
-    
+  }
 
-    header.appendChild(ul);       // add list to the container.
-    
-    /////Clear all the elements starting from 2dn using nextsibling of the dom except header
-     function clearDom() {
-        while (contents.firstChild.nextSibling) {
-            contents.removeChild(contents.firstChild.nextSibling);
-        }}
- 
-        const menu= document.getElementById('e2').addEventListener('click',()=>{
-            clearDom();
-          
-            menus();
-
- })
- const home= document.getElementById('e1').addEventListener('click',()=>{
+  const menu = document.getElementById("e2").addEventListener("click", () => {
     clearDom();
-    
+
+    menus();
+  });
+  const home = document.getElementById("e1").addEventListener("click", () => {
+    clearDom();
+
     pageload();
-
-})
-const contact= document.getElementById('e3').addEventListener('click',()=>{
-    clearDom();
-    contacts();
-
-})
-
+  });
+  const contact = document
+    .getElementById("e3")
+    .addEventListener("click", () => {
+      clearDom();
+      contacts();
+    });
 };

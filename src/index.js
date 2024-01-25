@@ -1,8 +1,3 @@
-import intiaload from './homepage.js';
-
-
-console.log("Salem from src index.js watch mode");
+import intiaload from "./homepage.js";
 
 intiaload();
-
-
